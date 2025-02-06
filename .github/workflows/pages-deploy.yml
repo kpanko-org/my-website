@@ -50,6 +50,9 @@ jobs:
         env:
           JEKYLL_ENV: "production"
 
+      - name: List what's been built
+        run: ls -R
+
       - name: Test site
         run: |
           bundle exec htmlproofer _site \
