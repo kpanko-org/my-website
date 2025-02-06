@@ -47,10 +47,9 @@ jobs:
         env:
           JEKYLL_ENV: "production"
 
-      - name: Upload what was built
-        uses: actions/upload-artifact@v4
+      - name: Upload site artifact
+        uses: actions/upload-pages-artifact@v3
         with:
-          name: github-pages
           path: _site
 
       - name: Test site
