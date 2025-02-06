@@ -50,7 +50,7 @@ jobs:
       - name: Upload what was built
         uses: actions/upload-artifact@v4
         with:
-          name: site-artifact
+          name: github-pages
           path: _site
 
       - name: Test site
