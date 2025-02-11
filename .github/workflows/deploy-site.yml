@@ -4,7 +4,7 @@ name: Deploy to web server
 on:
   workflow_dispatch:
   push:
-    branches: [ whatever ]
+    branches: [actions-debug]
 
 jobs:
   deploy:
