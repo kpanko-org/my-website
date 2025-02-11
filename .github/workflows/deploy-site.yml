@@ -4,7 +4,7 @@ name: Deploy to web server
 on:
   workflow_dispatch:
   push:
-    branches: [ whatever ] 
+    branches: [ whatever ]
 
 jobs:
   deploy:
@@ -24,5 +24,6 @@ jobs:
           REMOTE_HOST: ${{ secrets.REMOTE_HOST }}
         run: |
           echo "$SSH_PRIVATE_KEY" > private_key && chmod 600 private_key
-          ssh -i private_key -o StrictHostKeyChecking=no $REMOTE_USER@$REMOTE_HOST ls -laR
+          ssh -i private_key -o StrictHostKeyChecking=no \
+            $REMOTE_USER@$REMOTE_HOST ls -laR
           rm -f private_key
