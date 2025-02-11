@@ -15,11 +15,11 @@ jobs:
               run: ls -laR
 
             - name: SSH to server
-            env:
-                SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
-                REMOTE_USER: ${{ secrets.REMOTE_USER }}
-                REMOTE_HOST: ${{ secrets.REMOTE_HOST }}
-            run: |
-                echo "$SSH_PRIVATE_KEY" > private_key && chmod 600 private_key
-                ssh -i private_key -o StrictHostKeyChecking=no $REMOTE_USER@$REMOTE_HOST ls -laR
-                rm -f private_key
+              env:
+                  SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
+                  REMOTE_USER: ${{ secrets.REMOTE_USER }}
+                  REMOTE_HOST: ${{ secrets.REMOTE_HOST }}
+              run: |
+                  echo "$SSH_PRIVATE_KEY" > private_key && chmod 600 private_key
+                  ssh -i private_key -o StrictHostKeyChecking=no $REMOTE_USER@$REMOTE_HOST ls -laR
+                  rm -f private_key
