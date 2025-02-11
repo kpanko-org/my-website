@@ -3,6 +3,8 @@ name: Deploy to web server
 
 on:
   workflow_dispatch:
+  push:
+    branches: [ whatever ] 
 
 jobs:
   deploy:
