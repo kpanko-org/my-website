@@ -61,6 +61,12 @@ jobs:
     needs: build
 
     steps:
+      - name: Download site artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: site
+          path: _site
+
       - name: Show current directory
         run: ls -laR
 
