@@ -61,13 +61,10 @@ jobs:
     needs: build
 
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v4
-
       - name: Show current directory
         run: ls -laR
 
-      - name: SSH to server
+      - name: rsync to server
         env:
           SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
           REMOTE_USER: ${{ secrets.REMOTE_USER }}
