@@ -1,0 +1,3 @@
+<FilesMatch "\.html$">
+    FileETag MTime Size
+</FilesMatch>
