@@ -67,6 +67,12 @@ jobs:
           name: site
           path: _site
 
+      - name: Checkout adventure folder
+        uses: actions/checkout@v4
+        with:
+          repository: kpanko-org/retro-hackathon
+          path: adventure
+
       - name: Show current directory
         run: ls -laR
 
