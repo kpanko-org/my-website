@@ -67,11 +67,12 @@ jobs:
           name: site
           path: _site
 
-      - name: Checkout adventure folder
-        uses: actions/checkout@v4
-        with:
-          repository: kpanko-org/retro-hackathon
-          path: adventure
+      - name: Get adventure folder
+        run: |
+          wget -O adventure.zip https://github.com/kpanko-org/retro-hackathon/archive/refs/heads/main.zip
+          unzip adventure.zip
+          mv retro-hackathon-main _site/adventure
+          rm adventure.zip
 
       - name: Show current directory
         run: ls -laR
