@@ -48,6 +48,7 @@ jobs:
         with:
           name: site
           path: _site
+          include-hidden-files: true
 
       - name: Test site
         run: |
