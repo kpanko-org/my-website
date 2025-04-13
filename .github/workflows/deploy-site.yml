@@ -68,7 +68,7 @@ jobs:
     needs: build
     environment:
       name: staging
-      url: ${{ vars.SITE_URL }}
+      url: https://staging.kevinpanko.xyz/
 
     steps:
       - name: Checkout
@@ -97,7 +97,7 @@ jobs:
     needs: build
     environment:
       name: production
-      url: ${{ vars.SITE_URL }}
+      url: https://kevinpanko.xyz/
 
     steps:
       - name: Checkout
