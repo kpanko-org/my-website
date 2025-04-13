@@ -89,7 +89,7 @@ jobs:
           SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
           REMOTE_USER: ${{ secrets.REMOTE_USER }}
           REMOTE_HOST: ${{ secrets.REMOTE_HOST }}
-          REMOTE_PATH: ${{ vars.REMOTE_PATH }}
+          REMOTE_PATH: staging.kevinpanko.xyz
 
   deploy-production:
     if: github.ref == 'refs/heads/main'
@@ -112,10 +112,10 @@ jobs:
       - name: Show current directory
         run: ls -laR
 
-      - name: Deploy to staging
+      - name: Deploy to production
         run: .github/scripts/deploy.sh
         env:
           SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
           REMOTE_USER: ${{ secrets.REMOTE_USER }}
           REMOTE_HOST: ${{ secrets.REMOTE_HOST }}
-          REMOTE_PATH: ${{ vars.REMOTE_PATH }}
+          REMOTE_PATH: public_html
