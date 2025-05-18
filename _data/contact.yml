@@ -4,8 +4,8 @@
   icon: "fab fa-github"
 
 - type: stack-overflow
-  icon: 'fab fa-stack-overflow'
-  url:  'https://stackoverflow.com/users/125389/kevin-panko'
+  icon: "fab fa-stack-overflow"
+  url: "https://stackoverflow.com/users/125389/kevin-panko"
 
 #- type: twitter
 #  icon: "fa-brands fa-x-twitter"
