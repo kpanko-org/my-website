@@ -74,6 +74,8 @@ analytics:
     id: # fill in your Cloudflare Web Analytics token
   fathom:
     id: # fill in your Fathom Site ID
+  mouseflow:
+    id: e1fa90ac-5ecd-469d-8059-f9f75e90e290
 
 # Page views settings
 pageviews:
@@ -139,8 +141,9 @@ assets:
     # only works if `assets.self_host.enabled` is 'true'
     env: # [development | production]
 
+# KP: Turn off PWA because a static site should be just a static site.
 pwa:
-  enabled: true # The option for PWA feature (installable)
+  enabled: false # The option for PWA feature (installable)
   cache:
     enabled: true # The option for PWA offline cache
     # Paths defined here will be excluded from the PWA cache.
