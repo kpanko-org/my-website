@@ -4,4 +4,4 @@ icon: fas fa-info-circle
 order: 4
 ---
 
-Senior Software Engineer available for hire.
+Senior Software Engineer.
